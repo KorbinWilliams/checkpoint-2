@@ -21,7 +21,7 @@ let upgrades = {
   }
 }
 
-let autoModifier = 1;
+
 let clickModifier = 1;
 let count = 0;
 let counter = document.querySelector("#counter");
@@ -36,13 +36,19 @@ function revenueClick() {
 function buyUpgrade(num) {
   // take in price output count and modifier
   // define rvn lost, rvn modifier, resource check then add to counter
-  upgrades.find(upgrades => upgrades.price == num);
-  if (upgrades.price !== num) {
-    upgrades.find(automaticUpgrades => automaticUpgrades.price == num)
-  } count - num;
-  upgrades.forEach(upgrades => upgrades["quantity"] >= 1); {
-    autoModifier = upgrades["quantity"] * upgrades["mod"]
+
+  // upgrades.find(upgrades => upgrades.price == num);
+  // } count - num;
+  // upgrades.forEach(upgrades => upgrades["quantity"] >= 1); {
+  // autoModifier = upgrades["quantity"] * upgrades["mod"]
+  // };
+  let cost = num;
+  let autoModifier = 1 * upgrades["quantity"] * upgrades["mod"];
+  count - cost;
+  upgrades.find(upgrades => upgrades["price"] == cost); {
+    upgrades["quantity"] + 1;
   };
+
 }
 
 
