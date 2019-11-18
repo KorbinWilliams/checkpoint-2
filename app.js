@@ -22,15 +22,15 @@ let upgrades = {
 }
 
 
-let clickModifier = 1;
 let count = 0;
 let counter = document.querySelector("#counter");
-
+let clickModifier = 1;
+let autoModifier = upgrades["quantity"] * upgrades["mod"];
 
 function revenueClick() {
-  count + 1 * clickModifier;
   counter.innerHTML = `
   <span id="counter">${count}</span>`
+  count = count + 1 * clickModifier;
 }
 
 function buyUpgrade(num) {
@@ -43,19 +43,19 @@ function buyUpgrade(num) {
   // autoModifier = upgrades["quantity"] * upgrades["mod"]
   // };
   let cost = num;
-  let autoModifier = 1 * upgrades["quantity"] * upgrades["mod"];
-  count - cost;
-  upgrades.find(upgrades => upgrades["price"] == cost); {
-    upgrades["quantity"] + 1;
-  };
-
-}
-
-
-
-function collectAutoUpgrades(num) {
-  // itterate over automaticUpgrades, total modifiers, add to count (setInterval()) 
-  if () {
-
+  count = count - cost;
+  upgrades.find(upgrades => upgrades["price"] == cost);
+  upgrades.math(upgrades["quantity"] + 1);
+  if (count < cost) {
+    return cost = count + cost
   }
 }
+
+
+
+setInterval(function collectAutoUpgrades(num) {
+  // itterate over automaticUpgrades, total modifiers, add to count
+  upgrades.forEach(upgrades => upgrades["mod"] > 49);
+  autoModifier + count;
+  return count;
+}, 1000)
