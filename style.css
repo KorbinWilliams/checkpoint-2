@@ -1,0 +1,46 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: inherit;
+}
+
+.bg1 {
+  background-image: url(http://www.seekgif.com/uploads/book-open-book-pages-parchment-with-book-background-0.jpeg);
+}
+
+.book {
+  padding-top: 10vh;
+}
+
+.bg2 {
+  background-image: url(https://media.istockphoto.com/vectors/seamless-doodle-pattern-with-books-on-white-background-for-site-vector-id638323450);
+  opacity: 40%;
+}
+
+.bg2:hover {
+  opacity: 80%;
+}
+
+.txt {
+  text-shadow: 2px 2px black;
+} 
+
+.upgrade {
+  opacity: 100%;
+  padding-top: 5vh;
+  font-size: 20pt;
+  font-weight: bold;
+  color: crimson;
+}
+
+.btnsize {
+  height: 2em;
+  width: 2em;
+}
+  

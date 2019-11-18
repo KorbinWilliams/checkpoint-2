@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Novelist Game</title>
+</head>
+
+
+
+
+<body>
+  <div class="bg bg1">
+    <!-- FIXME  upgrades spilling out of background image on small size -->
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-8 d-flex justify-content-center">
+          <h1>Novelist Game</h1>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3>Revenue: <span id="counter"></span></h3>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-fluid">
+      <div class="row book">
+        <div class="col-12  d-flex justify-content-center">
+          <button onclick="revenueClick()">
+            <input type="image" src="https://i.pinimg.com/originals/c7/12/99/c7129915938cfd4424d004988212214a.png"
+              alt="novelclick">
+          </button>
+        </div>
+      </div>
+      <div class="bg bg2">
+        <div class="row mt-3">
+          <div class="col-6 d-flex justify-content-center upgrade">
+            <p class="pr-2 txt">Upgrade typewriter</p>
+            <button onclick="buyUpgrade(50)" id="typewriter"> <input class="btnsize" type="image"
+                src="http://www.reportingforhire.com/wp-content/uploads/2019/08/typewriter-drawing-at-paintingvalley-com-explore-collection-of.jpg"
+                alt="typewriter"></button>
+          </div>
+          <!-- TODO  upgrade to laptop, disable typewriter button, upgrade laptop (stretch) -->
+          <div class="col-6 d-flex justify-content-center upgrade">
+            <p class="pr-2 txt">Upgrade laptop</p>
+            <button onclick="buyUpgrade(250)" id="laptop"><input class="btnsize" type="image"
+                src="https://www.netclipart.com/pp/m/7-78283_drawing-computers-line-laptop-computer-coloring-pages.png"
+                alt="laptop"></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 d-flex justify-content-center upgrade">
+            <p class="pr-2 txt">Hire editor</p>
+            <button onclick="buyUpgrade(1000)" id="editor"><input class="btnsize" type="image"
+                src="https://news.fordham.edu/wp-content/uploads/2018/01/Magazine_Mankoff_How_About_Never.jpg"
+                alt="hire-editor"></button>
+          </div>
+          <div class="col-6 d-flex justify-content-center upgrade">
+            <p class="pr-2 txt">Hire infinite monkeys typing Shakespear</p>
+            <button onclick="buyUpgrade(20000)" id="monkeys"><input class="btnsize" type="image"
+                src="https://freetheunicorns.files.wordpress.com/2008/11/typingmonkey3.jpg"
+                alt="hire-infinite-monkeys"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </div>
+</body>
+
+
+</html>
