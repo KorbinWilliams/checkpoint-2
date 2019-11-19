@@ -40,10 +40,10 @@ function drawCount() {
 }
 
 function drawUpgrades() {
-  up1.innerHTML = `<p id="typewriter">(${upgrades.typewriter.price})You have(${upgrades.typewriter.quantity})</p>`
-  up2.innerHTML = `<p id="laptop">(${upgrades.laptop.price})You have(${upgrades.laptop.quantity})</p>`
-  up3.innerHTML = `<p id="editor">(${upgrades.editor.price})You have(${upgrades.editor.quantity})</p>`
-  up4.innerHTML = `<p id="monkeys">(${upgrades.monkeys.price})You have(${upgrades.monkeys.quantity})</p>`
+  up1.innerHTML = `<p id="typewriter">(${upgrades.typewriter.price})You have(${upgrades.typewriter.quantity})Current modifier(${upgrades.typewriter.mod * upgrades.typewriter.quantity})</p>`
+  up2.innerHTML = `<p id="laptop">(${upgrades.laptop.price})You have(${upgrades.laptop.quantity})Current modifier(${upgrades.laptop.mod * upgrades.laptop.quantity})</p>`
+  up3.innerHTML = `<p id="editor">(${upgrades.editor.price})You have(${upgrades.editor.quantity})Current modifier(${upgrades.editor.mod * upgrades.editor.quantity})</p>`
+  up4.innerHTML = `<p id="monkeys">(${upgrades.monkeys.price})You have(${upgrades.monkeys.quantity})Current modifier(${upgrades.monkeys.mod * upgrades.monkeys.quantity})</p>`
 }
 
 function revenueClick() {
