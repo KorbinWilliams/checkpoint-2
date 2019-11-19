@@ -1,27 +1,27 @@
 let upgrades = {
-  Typewriter: {
-    "price": 50,
-    "quantity": 0,
-    "mod": 2,
-    "auto": false
+  typewriter: {
+    price: 50,
+    quantity: 0,
+    mod: 2,
+    auto: false
   },
-  Laptop: {
-    "price": 250,
-    "quantity": 0,
-    "mod": 5,
-    "auto": false
+  laptop: {
+    price: 250,
+    quantity: 0,
+    mod: 5,
+    auto: false
   },
-  Editor: {
-    "price": 1000,
-    "quantity": 0,
-    "mod": 50,
-    "auto": true
+  editor: {
+    price: 1000,
+    quantity: 0,
+    mod: 50,
+    auto: true
   },
-  Monkeys: {
-    "price": 20000,
-    "quantity": 0,
-    "mod": 9001,
-    "auto": true
+  monkeys: {
+    price: 20000,
+    quantity: 0,
+    mod: 9001,
+    auto: true
   }
 }
 
@@ -40,10 +40,10 @@ function drawCount() {
 }
 
 function drawUpgrades() {
-  up1.innerHTML = `<p id="typewriter">(${upgrades.Typewriter.price})</p>`
-  up2.innerHTML = `<p id="laptop">(${upgrades.Laptop.price})</p>`
-  up3.innerHTML = `<p id="editor">(${upgrades.Editor.price})</p>`
-  up4.innerHTML = `<p id="monkeys">(${upgrades.Monkeys.price})</p>`
+  up1.innerHTML = `<p id="typewriter">(${upgrades.typewriter.price})You have(${upgrades.typewriter.quantity})</p>`
+  up2.innerHTML = `<p id="laptop">(${upgrades.laptop.price})You have(${upgrades.laptop.quantity})</p>`
+  up3.innerHTML = `<p id="editor">(${upgrades.editor.price})You have(${upgrades.editor.quantity})</p>`
+  up4.innerHTML = `<p id="monkeys">(${upgrades.monkeys.price})You have(${upgrades.monkeys.quantity})</p>`
 }
 
 function revenueClick() {
@@ -51,21 +51,19 @@ function revenueClick() {
   drawCount();
 }
 
-debugger;
+
 function buyUpgrade(name) {
   let item = upgrades[name]
-  if (item.price < count) {
+  if (item.price > count) {
     return
   }
   count -= item.price;
-  item.quantity++
-  item.price = item.price * 1.5
+  item.quantity++;
+  item.price = item.price * 1.5;
+  clickModifier = clickModifier * item.mod;
   drawUpgrades();
   drawCount();
 }
-
-buyUpgrade();
-
 
 setInterval(function collectAutoUpgrades() {
   for (let key in upgrades) {
@@ -76,3 +74,4 @@ setInterval(function collectAutoUpgrades() {
   } drawCount();
 }, 1000)
 
+collectAutoUpgrades();
